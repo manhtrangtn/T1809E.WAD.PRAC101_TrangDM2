@@ -25,12 +25,12 @@ namespace T1809E.WAD.PRACT101_TrangDM2.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return PartialView("Error");
             }
             Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
-                return HttpNotFound();
+                return PartialView("Error");
             }
             return View(employee);
         }
@@ -66,12 +66,12 @@ namespace T1809E.WAD.PRACT101_TrangDM2.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+              return PartialView("Error");
             }
             Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
-                return HttpNotFound();
+              return PartialView("Error");
             }
             return View(employee);
         }
@@ -93,12 +93,12 @@ namespace T1809E.WAD.PRACT101_TrangDM2.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+              return PartialView("Error");
             }
             Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
-                return HttpNotFound();
+              return PartialView("Error");
             }
             return View(employee);
         }
